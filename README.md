@@ -7,3 +7,8 @@
 //rootで実行
 npx zenn new:article
 ```
+
+## プレビューを開く
+```
+npx zenn preview
+```
