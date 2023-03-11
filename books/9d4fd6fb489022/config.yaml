@@ -1,0 +1,27 @@
+title: "Flowスマートコントラクト開発実践入門 ~NFTガチャを作ってみよう~"
+summary: "FlowとはEthereumなどと同じL1のブロックチェーンであり、開発したのは「NBA Top Shot」や「Crypto Kitties」といった大きなインパクトを与えた数々のNFTプロジェクトを手掛けたDapper Labsです。本書ではFlowでDappsを開発するために必要なCadence(スマートコントラクトを実装するために開発された独自言語)やSDKの使い方を実際のWebアプリを通して学びます。"
+topics: ["blockchain", "flow", "cadence", "web3"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - intro
+  - about
+  - environment
+  - syntax
+  - syntax2
+  - syntax3
+  - syntax4
+  - syntax5
+  - syntax6
+  - syntax7
+  - syntax8
+  - syntax9
+  - syntax10
+  - NonFungibleTokenなどの公開ライブラリについて
+  - 独自のInterfaceを定義してみる
+  - Interfaceを実装しcontract定義を作成する
+  - transactionを書いてみる
+  - scriptを書いてみる
+  - FCL(flow client library)を使用してwebアプリを作成する
+  - (おまけ)flow-go-sdkを使用してコントラクトと通信する
