@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/mongo:/data/db
+    networks:
+      - app-net
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://@mongo:27017/
+      ME_CONFIG_MONGODB_SERVER: mongo
+    networks:
+      - app-net
+networks:
+  app-net:
+    driver: bridge

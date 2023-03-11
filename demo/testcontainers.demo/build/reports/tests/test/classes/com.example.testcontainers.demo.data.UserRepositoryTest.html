@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.example.testcontainers.demo.data.UserRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.example.testcontainers.demo.data.UserRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.testcontainers.demo.data.html">com.example.testcontainers.demo.data</a> &gt; UserRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.001s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="UnsatisfiedDependencyException"></a>
+<h3 class="failures">UnsatisfiedDependencyException</h3>
+<span class="code">
+<pre>org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.testcontainers.demo.data.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1799)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1355)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowire(AbstractAutowireCapableBeanFactory.java:387)
+	at app//io.kotest.extensions.spring.SpringAutowireConstructorExtension.instantiate(SpringAutowireConstructorExtension.kt:28)
+	at app//io.kotest.engine.spec.InstantiateSpecKt.createAndInitializeSpec(instantiateSpec.kt:30)
+	at app//io.kotest.engine.spec.InstantiateSpecKt.instantiate(instantiateSpec.kt:11)
+	at app//io.kotest.engine.spec.SpecRefKt.instance(SpecRef.kt:14)
+	at app//io.kotest.engine.spec.SpecExecutor.createInstance-gIAlu-s(SpecExecutor.kt:127)
+	at app//io.kotest.engine.spec.SpecExecutor.access$createInstance-gIAlu-s(SpecExecutor.kt:48)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invokeSuspend(SpecExecutor.kt:85)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.FinalizeSpecInterceptor.intercept-0E7RQCE(FinalizeSpecInterceptor.kt:19)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.PrepareSpecInterceptor.intercept-0E7RQCE(PrepareSpecInterceptor.kt:20)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.ApplyExtensionsInterceptor.intercept-0E7RQCE(ApplyExtensionsInterceptor.kt:35)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecFinishedInterceptor.intercept-0E7RQCE(SpecFinishedInterceptor.kt:21)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecStartedInterceptor.intercept-0E7RQCE(SpecStartedInterceptor.kt:19)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invokeSuspend(SpecRefExtensionInterceptor.kt:27)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor.intercept-0E7RQCE(SpecRefExtensionInterceptor.kt:30)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.RequiresTagSpecInterceptor.intercept-0E7RQCE(RequiresTagSpecInterceptor.kt:35)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.TagsExcludedSpecInterceptor.intercept-0E7RQCE(TagsExcludedDiscoveryExtension.kt:32)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SystemPropertySpecFilterInterceptor.intercept-0E7RQCE(SystemPropertySpecFilterInterceptor.kt:49)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecFilterInterceptor.intercept-0E7RQCE(SpecFilterInterceptor.kt:37)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.IgnoredSpecInterceptor.intercept-0E7RQCE(IgnoredSpecInterceptor.kt:42)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.EnabledIfSpecInterceptor.intercept-0E7RQCE(EnabledIfSpecInterceptor.kt:40)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor.referenceInterceptors(SpecExecutor.kt:91)
+	at app//io.kotest.engine.spec.SpecExecutor.execute(SpecExecutor.kt:60)
+	at app//io.kotest.engine.ConcurrentTestSuiteScheduler$schedule$8$1$2.invokeSuspend(ConcurrentTestSuiteScheduler.kt:71)
+	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at app//kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:279)
+	at app//kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+	at app//kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at app//kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at app//kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at app//kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at app//io.kotest.common.RunBlockingKt.runBlocking(runBlocking.kt:3)
+	at app//io.kotest.engine.TestEngineLauncher.launch(TestEngineLauncher.kt:194)
+	at app//io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:82)
+	at app//io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:46)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="executionError"></a>
+<h3 class="failures">executionError</h3>
+<span class="code">
+<pre>org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.example.testcontainers.demo.data.UserRepositoryTest': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.testcontainers.demo.data.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at app//org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowire(AbstractAutowireCapableBeanFactory.java:387)
+	at app//io.kotest.extensions.spring.SpringAutowireConstructorExtension.instantiate(SpringAutowireConstructorExtension.kt:28)
+	at app//io.kotest.engine.spec.InstantiateSpecKt.createAndInitializeSpec(instantiateSpec.kt:30)
+	at app//io.kotest.engine.spec.InstantiateSpecKt.instantiate(instantiateSpec.kt:11)
+	at app//io.kotest.engine.spec.SpecRefKt.instance(SpecRef.kt:14)
+	at app//io.kotest.engine.spec.SpecExecutor.createInstance-gIAlu-s(SpecExecutor.kt:127)
+	at app//io.kotest.engine.spec.SpecExecutor.access$createInstance-gIAlu-s(SpecExecutor.kt:48)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invokeSuspend(SpecExecutor.kt:85)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$innerExecute$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.FinalizeSpecInterceptor.intercept-0E7RQCE(FinalizeSpecInterceptor.kt:19)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.PrepareSpecInterceptor.intercept-0E7RQCE(PrepareSpecInterceptor.kt:20)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.ApplyExtensionsInterceptor.intercept-0E7RQCE(ApplyExtensionsInterceptor.kt:35)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecFinishedInterceptor.intercept-0E7RQCE(SpecFinishedInterceptor.kt:21)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecStartedInterceptor.intercept-0E7RQCE(SpecStartedInterceptor.kt:19)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invokeSuspend(SpecRefExtensionInterceptor.kt:27)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor$intercept$inner$1.invoke(SpecRefExtensionInterceptor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecRefExtensionInterceptor.intercept-0E7RQCE(SpecRefExtensionInterceptor.kt:30)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.RequiresTagSpecInterceptor.intercept-0E7RQCE(RequiresTagSpecInterceptor.kt:35)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.TagsExcludedSpecInterceptor.intercept-0E7RQCE(TagsExcludedDiscoveryExtension.kt:32)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SystemPropertySpecFilterInterceptor.intercept-0E7RQCE(SystemPropertySpecFilterInterceptor.kt:49)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.SpecFilterInterceptor.intercept-0E7RQCE(SpecFilterInterceptor.kt:37)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.IgnoredSpecInterceptor.intercept-0E7RQCE(IgnoredSpecInterceptor.kt:42)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.interceptor.EnabledIfSpecInterceptor.intercept-0E7RQCE(EnabledIfSpecInterceptor.kt:40)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invokeSuspend(SpecExecutor.kt:90)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor$referenceInterceptors$3$1.invoke(SpecExecutor.kt)
+	at app//io.kotest.engine.spec.SpecExecutor.referenceInterceptors(SpecExecutor.kt:91)
+	at app//io.kotest.engine.spec.SpecExecutor.execute(SpecExecutor.kt:60)
+	at app//io.kotest.engine.ConcurrentTestSuiteScheduler$schedule$8$1$2.invokeSuspend(ConcurrentTestSuiteScheduler.kt:71)
+	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at app//kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:279)
+	at app//kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)
+	at app//kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at app//kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at app//kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at app//kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at app//io.kotest.common.RunBlockingKt.runBlocking(runBlocking.kt:3)
+	at app//io.kotest.engine.TestEngineLauncher.launch(TestEngineLauncher.kt:194)
+	at app//io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:82)
+	at app//io.kotest.runner.junit.platform.KotestJunitPlatformTestEngine.execute(KotestJunitPlatformTestEngine.kt:46)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at app//org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.testcontainers.demo.data.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1799)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1355)
+	at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at app//org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 109 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">UnsatisfiedDependencyException</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">executionError</td>
+<td class="failures">0s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>21:59:01.134 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:59:01.140 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:59:01.156 [Test worker @coroutine#2] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.testcontainers.demo.data.UserRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:59:01.161 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.testcontainers.demo.data.UserRepositoryTest], using SpringBootContextLoader
+21:59:01.162 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.testcontainers.demo.data.UserRepositoryTest]: class path resource [com/example/testcontainers/demo/data/UserRepositoryTest-context.xml] does not exist
+21:59:01.162 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.testcontainers.demo.data.UserRepositoryTest]: class path resource [com/example/testcontainers/demo/data/UserRepositoryTestContext.groovy] does not exist
+21:59:01.162 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.testcontainers.demo.data.UserRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:59:01.186 [Test worker @coroutine#2] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.testcontainers.demo.data.UserRepositoryTest]
+21:59:01.225 [Test worker @coroutine#2] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.testcontainers.demo.data.UserRepositoryTest]: using defaults.
+21:59:01.225 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:59:01.229 [Test worker @coroutine#2] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+21:59:01.232 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3727f0ee, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5c448433, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@fb713e7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1b5c3e5f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13741d5a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6b69761b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5c7668ba, org.springframework.test.context.event.EventPublishingTestExecutionListener@26221bad, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@158f4cfe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@35f639fa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5aaaa446, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c6333cd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3e47a03, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7d9ba6c]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.0)
+
+2022-06-24 21:59:01.510  INFO 13026 --- [er @coroutine#2] c.e.t.demo.data.UserRepositoryTest       : Starting UserRepositoryTest using Java 17.0.2 on jy-mac-mini.local with PID 13026 (started by yamanakajunichi in /Users/yamanakajunichi/work/zenn/demo/testcontainers.demo)
+2022-06-24 21:59:01.510  INFO 13026 --- [er @coroutine#2] c.e.t.demo.data.UserRepositoryTest       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-06-24 21:59:01.563  INFO 13026 --- [er @coroutine#2] c.e.t.demo.data.UserRepositoryTest       : Started UserRepositoryTest in 0.319 seconds (JVM running for 3.949)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2022/06/24 21:59:01</p>
+</div>
+</div>
+</body>
+</html>

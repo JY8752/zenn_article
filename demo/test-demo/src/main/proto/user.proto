@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_package = "com.example.testdemo.proto.user";
+option java_multiple_files = true;
+
+package user;
+
+import "google/protobuf/empty.proto";
+
+service User {
+  rpc Register(CreateUserRequest) returns (UserResponse) {}
+  rpc GetUser(GetUserRequest) returns (UserResponse) {}
+  rpc GetUsers(google.protobuf.Empty) returns (UserListResponse) {}
+}
+
+message CreateUserRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message UserListResponse {
+  repeated UserResponse user_list = 1;
+}
