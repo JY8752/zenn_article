@@ -39,3 +39,4 @@ pub contract TestContract {
     self.publicPath = PublicPath(identifier: "test") ?? panic("パスが不正")
   }
 }
+ 

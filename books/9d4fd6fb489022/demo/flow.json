@@ -1,5 +1,7 @@
 {
 	"contracts": {
+		"FungibleToken": "contracts/demo10.cdc",
+		"TestContract": "contracts/demo12.cdc",
 		"User": "contracts/demo5.cdc"
 	},
 	"networks": {
@@ -11,7 +13,7 @@
 	"accounts": {
 		"default": {
 			"address": "eb179c27144f783c",
-			"key": "593c09408f2403bce000a4491c109ae7a2cf3a272fe8833b028a980d46ffd157"
+			"key": "99183adc9db4884cff47186d9c3e9978fd83dd4c28ef373660f31bfc4f6c40c3"
 		},
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
@@ -21,6 +23,8 @@
 	"deployments": {
 		"emulator": {
 			"default": [
+				"FungibleToken",
+				"TestContract",
 				"User"
 			]
 		}

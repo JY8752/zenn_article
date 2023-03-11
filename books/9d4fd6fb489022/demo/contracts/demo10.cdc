@@ -50,7 +50,7 @@ pub contract FungibleToken {
     }
 }
 
-pub fun main() {
-  let vault <- FungibleToken.createVault(initialBalance: 1)
-  destroy vault
-}
+// pub fun main() {
+//   let vault <- FungibleToken.createVault(initialBalance: 1)
+//   destroy vault
+// }
