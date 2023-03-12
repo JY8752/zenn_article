@@ -6,11 +6,76 @@ title: "Cadenceの基礎[Capabilityと参照]"
 
 ## 参照
 
-Cadenceでは型```T```の参照を```&T```で表現することができます。
+Cadenceでは型```T```の参照を```&T```で表現することができます。参照型を作るときは```as```演算子を使用し明示的にキャストする必要があります。
+
+```ts
+    let hello = "hello"
+
+    // OK
+    let strRef = &hello as &String
+
+    // NG
+    let strRef2 = &hello
+```
+
+参照を作成する際に```auth```キーワードを使用することで認証された参照を作成することができます。通常、認証されていない参照はアップキャストのみ可能ですが認証されている参照はアップキャストに加えダウンキャストまで自由に行うことができる。
+
+```ts
+pub contract CounterContract {
+  pub resource interface HasCount {
+    pub var count: Int
+  }
+
+  pub resource Counter: HasCount {
+    pub var count: Int
+    init(count: Int) {
+      self.count = count
+    }
+    pub fun increment() {
+      self.count = self.count + 1
+    }
+  }
+
+  pub fun createCounter(): @Counter {
+    return <- create Counter(count: 1)
+  }
+}
+```
+
+```ts
+import CounterContract from "./contracts/counter.cdc"
+pub fun main() {
+    let counter <- CounterContract.createCounter()
+    
+    // HasCountの参照
+    let countRef = &counter as &{CounterContract.HasCount}
+
+    log(countRef.count)
+
+    // NG increment()の参照は含まれていないためこれは実行できない
+    // countRef.increment()
+
+    // NG この参照の作成は無効です。認証されていないダウンキャストはできません。
+    // let countRef2 = countRef as? &CounterContract.Counter
+
+    // 認証された参照を作成
+    let authCountRef = &counter as auth &{CounterContract.HasCount}
+
+    // 認証されているのでダウンキャストできる
+    let countRef3 = authCountRef as? &CounterContract.Counter
+
+    countRef3?.increment()
+    log(countRef3?.count)
+
+    destroy counter
+}
+```
 
 ## Capability
 
 CapabilityはAuthAccountの```link()```を使用することで作成することができます。```link()```で作成したCapablityはAccount型の```getCapability()```を使用することで取得することができ、```borrow()```を使用することでCapabilityからそのオブジェクトにアクセスするための参照を取得することができます。
+
+CadenceではResourceなどのオブジェクトの機能を公開する際にアカウントのストレージに保存されているそのオブジェクトのCapabilityをパブリックパスなどに格納しておくことで外部のユーザーはそのCapabilityからオブジェクトの機能の参照を取得しアクセスなどを行います。
 
 ```ts
 fun link<T: &Any>(_ newCapabilityPath: CapabilityPath, target: Path): Capability<T>?

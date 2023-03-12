@@ -1,5 +1,6 @@
 {
 	"contracts": {
+		"CounterContract": "contracts/counter.cdc",
 		"FungibleToken": "contracts/demo10.cdc",
 		"TestContract": "contracts/demo12.cdc",
 		"User": "contracts/demo5.cdc"
@@ -12,8 +13,8 @@
 	},
 	"accounts": {
 		"default": {
-			"address": "eb179c27144f783c",
-			"key": "99183adc9db4884cff47186d9c3e9978fd83dd4c28ef373660f31bfc4f6c40c3"
+			"address": "ec4809cd812aee0a",
+			"key": "9a82882248a1241738a82d20761d94c88bbb22680c0ca41802b9f063adcb4e88"
 		},
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
@@ -23,6 +24,7 @@
 	"deployments": {
 		"emulator": {
 			"default": [
+				"CounterContract",
 				"FungibleToken",
 				"TestContract",
 				"User"
