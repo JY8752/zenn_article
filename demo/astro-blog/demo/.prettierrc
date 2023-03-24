@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "endOfLine": "auto",
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ],
+  "pluginSearchDirs": false
+}
