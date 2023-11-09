@@ -1,0 +1,90 @@
+version: '3'
+
+dotenv:
+  - ".env"
+
+vars:
+  CONTAINER_NAME: go-unittest-architecture-db
+  MIGRATIONS_PATH: migrations
+
+tasks:
+  hello:
+    cmds:
+      - echo 'Hello World from Task!'
+    silent: true
+    desc: 'Hello Test Task.'
+  db:run:
+    cmds:
+      - docker run --rm --name {{.CONTAINER_NAME}}
+        -p $MYSQL_PORT:$MYSQL_PORT
+        -e MYSQL_ROOT_PASSWORD=$MYSQL_PASS
+        -e MYSQL_DATABASE=$MYSQL_DBNAME
+        -d mysql:latest
+    silent: true
+    desc: 'Run MySQL container.'
+  db:connect:
+    cmds:
+      - docker exec -it {{.CONTAINER_NAME}} mysql -uroot -p$MYSQL_PASS $MYSQL_DBNAME
+    silent: true
+    desc: 'Connect MySQL container.'
+  db:stop:
+    cmds:
+      - docker stop {{.CONTAINER_NAME}}
+    silent: true
+    desc: 'Stop MySQL container.When stop, container remove.'
+  migrate:create:
+    cmds:
+      - migrate create -ext sql -dir {{.MIGRATIONS_PATH}} -seq {{.CLI_ARGS}}
+    desc: 'Create migration file.Migration name must be specified as an argument.ex) task migrate:create -- create_user_table'
+  migrate:up:
+    cmds:
+      - migrate --path {{.MIGRATIONS_PATH}}
+        --database "mysql://$MYSQL_USER:$MYSQL_PASS@tcp($MYSQL_HOST:$MYSQL_PORT)/$MYSQL_DBNAME"
+        -verbose up
+    desc: 'Execution migration up.'
+  migrate:down:
+    cmds:
+      - migrate --path {{.MIGRATIONS_PATH}}
+        --database "mysql://$MYSQL_USER:$MYSQL_PASS@tcp($MYSQL_HOST:$MYSQL_PORT)/$MYSQL_DBNAME"
+        -verbose down
+    desc: 'Execution migration down.'
+  migrate:version:
+    cmds:
+      - migrate --path {{.MIGRATIONS_PATH}}
+        --database "mysql://$MYSQL_USER:$MYSQL_PASS@tcp($MYSQL_HOST:$MYSQL_PORT)/$MYSQL_DBNAME"
+        -verbose version
+    desc: 'Check current migration version.'
+  migrate:force:
+    cmds:
+      - migrate --path {{.MIGRATIONS_PATH}}
+        --database "mysql://$MYSQL_USER:$MYSQL_PASS@tcp($MYSQL_HOST:$MYSQL_PORT)/$MYSQL_DBNAME"
+        -verbose force {{.CLI_ARGS}}
+    desc: 'Execute force migration version.Migration version must be specified as an argument.ex)task migrate:force -- 2'
+  generate:
+    cmds:
+      - go generate ./...
+    desc: 'execute `go generate` command. generate mock by `gomock` and di by `wire`.'
+  generate:di:
+    cmds: 
+      - wire gen
+    desc: 'execute `wire gen` command.'
+  update:golden:
+    cmds:
+      - go test -tags=e2e -v ./... -update -clean
+    desc: 'update golden file.'
+  test:unit:
+    cmds:
+      - go test -tags=unit -v -count=1 ./...
+    desc: 'execute unit tests.'
+  test:integration:
+    cmds:
+      - go test -tags=integration -v -count=1 ./...
+    desc: 'execute integration tests.'
+  test:e2e:
+    cmds:
+      - go test -tags=e2e -v -count=1 ./...
+    desc: 'execute e2e tests.'
+  test:all:
+    cmds:
+      - go test -tags=unit,integration,e2e -v -count=1 ./...
+    desc: 'execute all tests.'
