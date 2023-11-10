@@ -6,7 +6,7 @@ summary: "「単体テストの考え方/使い方」という書籍の中でテ
 
   この本ではモックを極力しようしない古典学派的なテストの書き方にこだわったアーキテクチャをGoを使用して再考していきたいと思います。"
 topics: ["Go", "test", "integration", "e2e", "golang"]
-published: false
+published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
 chapters:
