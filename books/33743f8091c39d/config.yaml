@@ -4,7 +4,7 @@ summary: "Protocol Buffers(Protobuf)を用いた開発(主にgRPC)にはprotoc�
   こういったProtobufを用いた開発に関わるさまざまな問題をBufは解決するためにBuf CLIやBuf Schema Registry、Connectプロトコルなどさまざまなツールやプロトコルを開発しました。
   本書ではBufが開発したさまざまなツールやプロトコルを使用し、現代的でモダンなProtobuf開発について紹介します。"
 topics: ["gRPC", "Buf", "ProtocolBuffers", "Connect", "Go"]
-published: false
+published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
 chapters:
