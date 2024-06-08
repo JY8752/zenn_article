@@ -1,0 +1,13 @@
+version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: data
+  disable:
+    - module: buf.build/bufbuild/protovalidate
+      file_option: go_package_prefix
+plugins:
+  - remote: buf.build/protocolbuffers/go:v1.34.1
+    out: gen
+    opt: paths=import
