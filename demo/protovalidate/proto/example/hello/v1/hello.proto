@@ -4,4 +4,7 @@ package example.hello.v1;
 
 import "buf/validate/validate.proto";
 
-message Hello { string hello = 1 [ (buf.validate.field).string.min_len = 1 ]; }
+message Hello {
+    option (buf.validate.message).disabled = true;
+    string hello = 1 [ (buf.validate.field).string.min_len = 1 ]; 
+    }
