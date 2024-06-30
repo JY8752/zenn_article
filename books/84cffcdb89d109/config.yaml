@@ -1,0 +1,18 @@
+title: "[protovalidte徹底解析] Protobufスキーマをバリデーションしてより安全でドキュメント性の高いスキーマ駆動開発をしよう"
+summary: "Protobufのスキーマをバリデーションするのに長らくprotoc-gen-validate(PGV)が使われてきました。しかし、PGVはすでにその役目を終えprotovalidateが完全な後継としてその役目を引き継ぐこととなりました。protovalidateはGoogleが開発した式言語であるCEL(Common Expression Language)を採用しており、より柔軟な制約を可能としましたがCELの情報はまだ少なくprotovalidateに難しさを感じた人もいるかもしれません。
+  本書籍ではprotovalidateの使い方と全ての制約ルールを解説、紹介するだけでなくCELを使った基本的な評価式の読み書きについて解説することでprotovalidate採用の手助けとなることを目的としています。"
+topics: ["protovalidate", "Buf", "Protocolbuffers", "Go", "CEL"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - "1" # はじめに
+  - "2" # protovalidateについて
+  - "3" # protovalidateを使ってみる
+  - "4" # messageのバリデーション
+  - "5" # oneofのバリデーション
+  - "6" # stringのバリデーション
+  - "7"
+  - "8"
+  - "9"
+  - "10"

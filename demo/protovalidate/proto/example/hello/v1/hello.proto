@@ -5,6 +5,54 @@ package example.hello.v1;
 import "buf/validate/validate.proto";
 
 message Hello {
-    option (buf.validate.message).disabled = true;
-    string hello = 1 [ (buf.validate.field).string.min_len = 1 ]; 
-    }
+  message User {
+    int64 id = 1;
+    string name = 2;
+    int32 age = 3;
+    string country = 4;
+  }
+
+  string hello = 1 [ (buf.validate.field).string.min_len = 1 ];
+  repeated int32 num_list = 2 [ (buf.validate.field).cel = {
+    id : "repeated.int32.multiple5"
+    message : "value must be multiple of 5"
+    expression : "this.all(x, x % 5 == 0)"
+  } ];
+  repeated string string_list = 3 [ (buf.validate.field).cel = {
+    id : "repeated.string.exists.apple"
+    message : "value must exists \'apple\'"
+    expression : "this.exists(str, str == \'apple\')"
+  } ];
+  repeated User user_list = 4 [ (buf.validate.field).cel = {
+    id : "repeated.user.japanese.adult"
+    message : "value must be Japanese and over twenty years old"
+    expression : "this.filter(user, user.age >= 20).exists(user, user.country "
+                 "== \'Japan\')"
+  } ];
+}
+
+message Example {
+  message User {
+    int64 id = 1;
+    string name = 2;
+    int32 age = 3;
+    string country = 4;
+  }
+
+  repeated int32 num_list = 1 [ (buf.validate.field).cel = {
+    id : "repeated.int32.multiple5"
+    message : "value must be multiple of 5"
+    expression : "this.all(x, x % 5 == 0)"
+  } ];
+  repeated string string_list = 2 [ (buf.validate.field).cel = {
+    id : "repeated.string.exists.apple"
+    message : "value must exists \'apple\'"
+    expression : "this.exists(str, str == \'apple\')"
+  } ];
+  repeated User user_list = 3 [ (buf.validate.field).cel = {
+    id : "repeated.user.japanese.adult"
+    message : "value must be Japanese and over twenty years old"
+    expression : "this.filter(user, user.age >= 20).exists(user, user.country "
+                 "== \'Japan\')"
+  } ];
+}
