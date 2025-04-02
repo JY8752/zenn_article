@@ -2,11 +2,9 @@
 
 ## 技術的背景と専門分野
 
-- **主な専門分野**: Goによるバックエンド開発、gRPC、Kubernetes、ブロックチェーン
-- **副次的な専門分野**: Kotlin、Spring Boot、関数型プログラミング、テスト手法（特にプロパティベーステスト）
-- **興味のある技術**: Astro、Buf、Cloud Functions、EKS、Docker、testcontainers
-- **開発環境の最適化**: ターミナル(ghostty)、シェル環境、エディタ、効率的な日本語入力(SKK)などに関心がある
-- **効率的なツール**: Raycast、Karabinerなど作業効率を向上させるツールに関心がある
+- **主な専門分野**: Goによるバックエンド開発、gRPC、テスト、クリーンアーキテクチャやDDDといったアーキテクチャ
+- **副次的な専門分野**: Java、Kotlin、Spring Boot、関数型プログラミング、テスト手法（特にプロパティベーステスト）
+- **興味のある技術**: Buf、Cloud Functions、EKS、Docker、testcontainers
 
 ## 文体の特徴
 

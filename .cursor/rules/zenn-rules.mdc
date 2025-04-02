@@ -1,0 +1,89 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# このリポジトリについてと Zenn サービスについて
+
+本リポジトリは技術投稿サイトZennの投稿記事を管理するためのリポジトリです。以下は技術投稿サイトのZennについての詳細を記したものです。
+
+## Zennとは
+
+Zennとは日本の技術投稿webサービスである。主にプログラミングに関する技術のことであれば自由に投稿することができる。Zennには後述する基本の記事と本、スクラップの3種類の投稿手段がある。
+
+### Zennのarticles(記事)について
+
+Zennの基本的な技術投稿手段。zenn CLIを使うことでmarkdown形式で技術記事を執筆、投稿することが可能となっている。技術記事の先頭には必ず以下の形式でタイトルなどを記載する。
+
+```markdown
+---
+title: "Astro + zenn-markdown-htmlで始める個人ブログ"
+emoji: "🐕"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: ["Astro", "TypeScript", "zenn", "markdown"]
+published: true
+---
+```
+
+- title: 技術記事のタイトル
+- emoji: zennの特徴的な部分。技術記事には何かしらの絵文字を1つ紐づけて表示する。
+- type: zennには投稿の種別がtechとideaの2種類ある。基本的にはtechで問題ないが思想や意見のみの投稿の場合はideaを使う。
+- topics: 最大5つまで記事に関係する技術ワードを紐づけられる。
+- published: true or false。trueの状態でGitHubリポジトリにpushすると投稿されるようなワークフローが組まれている。投稿時は手動でtrueに変えるので基本はfalseで問題ない。
+
+この形式の技術記事はarticles配下に任意のファイル名で保存される。
+
+### Zennのbooks(本)について
+
+zennはいくつかのmarkdownファイルをまとめて技術本形式で投稿できるようになっている。以下はzenn本の特徴とルールである。
+
+- books配下に任意のディレクトリ名で作成される。
+- config.yaml, cover.png, <任意のファイル名>.mdが配置される。
+- markdown1ファイルが本の1ページに相当し、markdownには先頭に以下のようなtitleが必須。
+
+```markdown
+---
+title: "はじめに"
+---
+```
+
+- cover.pngはその本の表紙となる画像ファイルである。
+- config.yamlには本の構成を記載する。以下は記載例。
+
+```yaml:config.yaml
+title: "[protovalidate徹底ガイド] より安全でドキュメント性の高いスキーマ駆動開発"
+summary: "Protobufのスキーマをバリデーションするのに長らくprotoc-gen-validate(PGV)が使われてきました。しかし、PGVはすでにその役目を終えprotovalidateが完全な後継としてその役目を引き継ぐこととなりました。protovalidateはGoogleが開発した式言語であるCEL(Common Expression Language)を採用しており、より柔軟な制約を可能としましたがCELの情報はまだ少なくprotovalidateに難しさを感じた人もいるかもしれません。
+  本書籍ではprotovalidateの使い方と全ての制約ルールを解説、紹介するだけでなくCELを使った基本的な評価式の読み書きについて解説することでprotovalidate採用の手助けとなることを目的としています。"
+topics: ["protovalidate", "Buf", "Protocolbuffers", "Go", "CEL"]
+published: true
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - "1" # はじめに
+  - "2" # protovalidateについて
+  - "3" # protovalidateを使ってみる
+  - "4" # message / oneofのバリデーション
+  - "5" # stringのバリデーション
+  - "6" # bool / bytesのバリデーション
+  - "7" # 数値のバリデーション
+  - "8" # enumのバリデーション
+  - "9" # map / repeatedのバリデーション
+  - "10" # Well-Known Typesのバリデーション
+  - "11" # FieldConstratinsのその他の値について
+  - "12" # CELについてより詳しく知る
+  - "13" # (おまけ)protovalidateへのコントリビュート
+  - "14" # おわりに
+```
+
+### Zennのスクラップについて
+
+Zennにはスクラップ形式で投稿することも可能です。スクラップはmarkdownで管理することはできません。
+
+## Zennのmarkdownルール
+
+@https://zenn.dev/zenn/articles/markdown-guide
+
+上記サイトを参照。基本的なmarkdown形式に加えzenn独自の記法が存在します。
+
+
