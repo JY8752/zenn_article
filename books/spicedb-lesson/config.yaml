@@ -1,0 +1,26 @@
+title: "SpiceDB入門 - ゼロから学ぶ次世代認可システムの設計と実装"
+summary: |
+  SpiceDBとはGoogleのZanzibarをベースに開発された認可システムを構築するためのオープンソースのソフトウェアです。
+  SpiceDBは独自のスキーマ言語を使い、リソースとサブジェクトとの関係やpermissionを記述することができるため非常に変更に強く柔軟に認可システムを構築することができます。
+  また、SpiceDBはクラスター構成の分散システムになっており、高可用性とスケーラビリティを持つためパフォーマンスにも優れています。
+  しかし、まだ本書を執筆する時点では情報が少なく特に国内での採用事例は非常に少ないです。
+  本書ではSpiceDBの概要や基本的な使い方、実際にSpiceDBを使って認可システムを構築する方法を解説します。
+  本書を通してSpiceDBや認可システムの実装について興味を持っていただける方がいたら幸いです。
+topics: ["SpiceDB", "Go", "TypeScript", "kubernetes", "認可"]
+published: true
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - "1" #はじめに
+  - "2" # SpiceDBについて
+  - "3" # Playgroundを使ってSpiceDBを試してみる
+  - "4" # AuthZed Dedicated(マネージドSpiceDB)を使ってみる
+  - "5" # ZanzibarとSpiceDBの関係
+  - "6" # 分散システムとしてのSpiceDB
+  - "7" # New Enemy問題の対策(ZedTokensの使用)
+  - "8" # SpiceDBにおけるRelationshipsを理解する
+  - "9" # スキーマ言語の文法
+  - "10" # Minikubeを使ってローカルにSpiceDBクラスターを構築する
+  - "11" # Client Libraryの使用
+  - "12" # SpiceDBのスキーマチェックとバリデーションテスト
+  - "13" # おわりに
