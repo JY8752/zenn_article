@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zenn Scrap to Article"
+  short_description: "Zennスクラップと成果物コードから忠実な記事草稿を作成"
+  default_prompt: "Use $write-zenn-article-from-scrap to turn this Zenn scrap URL into a faithful draft article."

@@ -2,7 +2,15 @@
   "plugins": {},
   "filters": {},
   "rules": {
-    "preset-ja-technical-writing": true,
-    "preset-jtf-style": true
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [":::"]
+      },
+      "ja-no-weak-phrase": false,
+      "no-exclamation-question-mark": false
+    },
+    "preset-jtf-style": {
+      "1.1.1.本文": false
+    }
   }
 }
